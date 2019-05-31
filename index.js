@@ -1,5 +1,5 @@
 const key = '83c54f70'
-const corsME = "https://crossorigin.me";
+const corsME = "https://cors-anywhere.herokuapp.com/";
 
 $(document).ready(() => {
   $('#searchForm').on('submit', () => {
