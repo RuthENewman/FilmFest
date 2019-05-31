@@ -1,4 +1,5 @@
 const key = '83c54f70'
+const corsME = "http://crossorigin.me";
 
 $(document).ready(() => {
   $('#searchForm').on('submit', () => {
@@ -13,7 +14,7 @@ const state = {
 }
 
 const findFilms = (query) => {
-  axios.get('http://www.omdbapi.com?apikey=' + key + '&s=' + query)
+  axios.get(corsME + 'http://www.omdbapi.com?apikey=' + key + '&s=' + query)
   .then((response) => {
     state.films = response.data.Search
     let filmDetails = '';
@@ -41,7 +42,7 @@ const filmSelected = id => {
 
 const findFilm = () => {
   let filmId = sessionStorage.getItem('filmId');
-  axios.get('http://www.omdbapi.com?apikey=' + key + '&i=' + filmId)
+  axios.get(corsME + 'http://www.omdbapi.com?apikey=' + key + '&i=' + filmId)
   .then((response) => {
     console.log(response);
     let film = response.data;
