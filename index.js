@@ -1,5 +1,5 @@
 const key = '83c54f70'
-const corsME = "http://crossorigin.me";
+const corsME = "https://crossorigin.me";
 
 $(document).ready(() => {
   $('#searchForm').on('submit', () => {
